@@ -64,13 +64,23 @@ here bind function on walk sets the "this" in it as the reference to the object 
 
     console.log(sum);
 
-    * reduce() takes two arguments--> * a callback function, which returns the value of the assigned variable
-                                      * The initial value of the accumulator. (i.e, in this case, accumulator = 0 at starting)
-    * The value of accumulator changes according to the previous value of the the assigned variable(in this case 'sum')
-    ** accumulator = 0, currentValue = 1 --> sum = 1
-    ** accumulator = 1, currentValue = -1 --> sum = 0
-    ** accumulator = 0, currentValue = 2 --> sum = 2
-    ** accumulator = 2, currentValue = 3 --> sum = 5
+        * reduce() takes two arguments--> * a callback function, which returns the value of the assigned variable
+                                        * The initial value of the accumulator. (i.e, in this case, accumulator = 0 at starting)
+        * The value of accumulator changes according to the previous value of the the assigned variable(in this case 'sum')
+            ** accumulator = 0, currentValue = 1 --> sum = 1
+            ** accumulator = 1, currentValue = -1 --> sum = 0
+            ** accumulator = 0, currentValue = 2 --> sum = 2
+            ** accumulator = 2, currentValue = 3 --> sum = 5
+
+
+    const sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+        * If accumulator value is not initialized, 
+        then accumulator's initial value will be the first element of the array, i.e, accumulator = 1
+        Then code will run in the following fashion -->
+            ** accumulator = 1, currentValue = -1 --> sum = 0
+            ** accumulator = 0, currentValue = 2 --> sum = 2
+            ** accumulator = 2, currentValue = 3 --> sum = 5
 
 //--------------------------------------------------------------------------------------------------------------
   26:10 - Object Destructuring
