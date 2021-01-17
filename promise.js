@@ -4,8 +4,8 @@
 // If a promise is fulfilled, it executes the resolve part of code.
 // If a promise is broken, it executes the reject part of d code.  
 const makeServerRequest = new Promise((resolve, reject) => {
-    let responseFromServer = false;
-
+    let responseFromServer = true;
+    // let responseFromServer = false;  // uncomment this is for showing reject
     if (responseFromServer) {
         resolve("We got the data");
     } else {
